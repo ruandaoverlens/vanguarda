@@ -26,7 +26,7 @@ Aplicacao web fullstack moderna construida com Next.js e Supabase.
 
 ```bash
 # 1. Clone o repositorio
-git clone https://github.com/<seu-usuario>/vanguarda.git
+git clone https://github.com/ruandaoverlens/vanguarda.git
 cd vanguarda
 
 # 2. Instale as dependencias
