@@ -41,8 +41,14 @@ yarn-error.log*
 # vercel
 .vercel
 
-# claude code
-.claude/
+# claude code (versionar settings.json e skills, ignorar configs locais)
+.claude/settings.local.json
+
+# vscode (config local)
+.vscode/
+
+# windows artifacts
+nul
 
 # typescript
 *.tsbuildinfo
