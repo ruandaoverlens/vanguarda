@@ -1,37 +1,16 @@
 ---
 name: new-component
-description: Cria um novo componente React com TypeScript e Tailwind seguindo os padroes do Vanguarda.
+description: Cria um novo componente React com TypeScript e Tailwind seguindo o Design System do Vanguarda.
 argument-hint: "<NomeDoComponente>"
+context: fork
+agent: frontend
 ---
 
-Crie o componente `$ARGUMENTS` seguindo os padroes do projeto.
+Crie o componente **$ARGUMENTS** seguindo o Design System do projeto.
 
-## Regras
+## Contexto
 
-1. Crie em `src/components/<nome-do-componente>.tsx` (kebab-case para arquivo, PascalCase para export)
-2. Use TypeScript com interface de Props tipada
-3. Use Tailwind CSS para estilizacao — nenhum CSS externo
-4. Componente funcional com arrow function
-5. Exporte como **named export** (nao default)
-6. So adicione `"use client"` se o componente realmente precisar de interatividade (useState, useEffect, onClick, etc.)
-
-## Template base
-
-```tsx
-interface NomeDoComponenteProps {
-  // props aqui
-}
-
-export function NomeDoComponente({ }: NomeDoComponenteProps) {
-  return (
-    <div>
-      {/* conteudo */}
-    </div>
-  );
-}
-```
-
-## Apos criar
-
-1. Pergunte ao usuario se o componente precisa de estado ou efeitos (para decidir "use client")
-2. Se for um componente de UI reutilizavel, considere criar em `src/components/ui/`
+- Localizacao: `src/components/` (componentes de negocio, NAO primitivos do DS)
+- Consulte o skill `ds-components` para saber quais primitivos estao disponiveis
+- Consulte o skill `ds-foundations` para tokens e padroes visuais
+- Se precisar de um primitivo que nao existe, informe o usuario para usar `/ds-manage add <componente>`
