@@ -66,9 +66,10 @@ GOVERNANCA (DesignOps)               CRIACAO (Frontend)
 ### Stack do DS
 
 - **Base:** shadcn/ui (new-york style) + Radix UI + Tailwind CSS 4
-- **Tokens:** CSS variables em `globals.css` (formato oklch)
+- **Tokens:** CSS variables em `globals.css` (hex + oklch para destructive)
 - **Helper:** `cn()` em `src/lib/utils.ts` (clsx + tailwind-merge)
-- **Fontes:** Geist Sans + Geist Mono via next/font
+- **Fontes:** Outfit (display, uppercase) + Inter (body) + JetBrains Mono via next/font
+- **Primary:** atmos (#77C5D5) — brand color principal
 - **Icones:** lucide-react
 - **Config:** `components.json` na raiz
 
@@ -99,6 +100,33 @@ src/components/
 - `/new-component <Nome>` — cria componente de negocio via Frontend
 - `/new-page <rota>` — cria pagina via Frontend
 
-## Handoff
+## Backlog — Fonte de verdade
 
-**IMPORTANTE:** No inicio de cada conversa, leia `TASKS.md` para entender o estado atual do projeto — o que ja foi feito e qual e o proximo passo.
+O arquivo `docs/BACKLOG.md` e a **fonte de verdade** do projeto para desenvolvimento. Ele contem:
+
+- **Epicos** (herdados do PRD) com status e prioridade
+- **User Stories** no formato "Como [persona], quero [acao] para [beneficio]"
+- **Tasks tecnicas** granulares por story, com estimativas em story points
+- **Dependencias** entre stories
+- **Sprints** organizadas com status de progresso
+
+### Hierarquia de documentos
+
+```
+docs/BRIEFING.md   → Visao e requisitos brutos (input do PM)
+docs/PRD.md        → Requisitos estruturados e epicos (input do SM)
+docs/BACKLOG.md    → Stories e tasks prontas para execucao (FONTE DE VERDADE)
+TASKS.md           → Tracking rapido de fases e marcos do projeto
+```
+
+### Regras de uso
+
+1. **Inicio de sessao:** leia `docs/BACKLOG.md` para saber o que desenvolver a seguir
+2. **Consulte `TASKS.md`** para contexto de fases e marcos ja concluidos
+3. **Ao concluir uma story/task:** atualize o status no `BACKLOG.md` (e `TASKS.md` se relevante)
+4. **Se o BACKLOG.md nao existir:** o workflow de planejamento ainda nao foi executado — use `/briefing` → `/prd` → `/backlog` → `/qa-gate`
+
+### Workflows documentados
+
+- **Planejamento:** `docs/WORKFLOW-PLANNING.md` — da ideia ao backlog
+- **Desenvolvimento:** `docs/WORKFLOW-DEVELOPMENT.md` — do backlog ao deploy

@@ -69,8 +69,8 @@ Voce e o gestor de governanca do Design System do projeto Vanguarda. Seu papel e
 ## Stack de referencia
 
 - shadcn/ui (new-york style) + Radix UI + Tailwind CSS 4
-- Fontes: Geist Sans + Geist Mono via next/font
-- Base color: neutral
+- Fontes: Outfit (display/sans) + Inter (body) + JetBrains Mono (mono) via next/font
+- Primary color: atmos (#77C5D5)
 - Icon library: lucide-react
 - Config: `components.json` na raiz
 
